@@ -1,0 +1,1 @@
+export const GENERAL_MESSAGE = 'Hello PWESH BEAUTY HUB, I would like to make an enquiry'

@@ -1,10 +1,18 @@
 import { useState } from 'react'
 import WhatsAppButton from '../components/WhatsAppButton'
+import lashesImage from '../assets/work-lashes.webp'
+import tattooImage from '../assets/work-tattoo.webp'
+import teethImage from '../assets/work-teeth.webp'
+import bracesImage from '../assets/work-braces.webp'
+import nailsImage from '../assets/work-nails.webp'
+import browsImage from '../assets/services-brows.webp'
+import piercingImage from '../assets/services-piercing.webp'
 
 interface Service {
   name: string
   category: string
   image: string
+  alt: string
   description: string
   tag: string
 }
@@ -15,49 +23,56 @@ const services: Service[] = [
   {
     name: 'Lashes',
     category: 'Lashes & Brows',
-    image: 'https://images.unsplash.com/photo-1583001809873-a1284a563176?q=80&w=800&auto=format&fit=crop',
+    image: lashesImage,
+    alt: 'Lash extensions close up',
     description: 'Lash sets applied with care and precision, shaped to suit your natural eyes.',
     tag: 'Custom fit'
   },
   {
     name: 'Brows',
     category: 'Lashes & Brows',
-    image: 'https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=800&auto=format&fit=crop',
+    image: browsImage,
+    alt: 'Neatly shaped eyebrow',
     description: 'Brow shaping and styling that frames your face with a clean, natural look.',
     tag: 'Precision'
   },
   {
     name: 'Tattoo',
     category: 'Smile & Body',
-    image: 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=800&auto=format&fit=crop',
+    image: tattooImage,
+    alt: 'Script tattoos on a forearm and a thigh',
     description: 'Hygienic body art, planned with you before the first line is drawn.',
     tag: 'Hygienic'
   },
   {
     name: 'Piercing',
     category: 'Smile & Body',
-    image: '', // Gracefully handled by placeholder fallback below
+    image: piercingImage,
+    alt: 'Ear piercing with small gold studs',
     description: 'Careful, hygienic piercing, with the placement discussed with you first.',
     tag: 'Careful'
   },
   {
     name: 'Teeth Whitening',
     category: 'Smile & Body',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop',
+    image: teethImage,
+    alt: 'Teeth after whitening',
     description: 'A gentle whitening session for a brighter, more confident smile.',
     tag: 'Bright smile'
   },
   {
     name: 'Braces',
     category: 'Smile & Body',
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop',
+    image: bracesImage,
+    alt: 'Braces on teeth',
     description: 'Braces fitted with care, with clear guidance on looking after them.',
     tag: 'Guided care'
   },
   {
     name: 'Nails',
     category: 'Nails',
-    image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop',
+    image: nailsImage,
+    alt: 'Stiletto nails with white tips and a black pattern',
     description: 'Nail shaping and polish, with the colour and style chosen by you.',
     tag: 'Your style'
   }
@@ -90,18 +105,19 @@ export default function Services() {
             </p>
           </div>
 
-          {/* Dynamic Filter Buttons */}
+          {/* Filter Buttons */}
           <div className="mt-12 flex flex-wrap gap-2 border-b border-pwesh-lilac/40 pb-6">
             {categoryFilters.map((category) => (
               <button
                 key={category}
                 type="button"
                 onClick={() => setSelectedCategory(category)}
-                className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-200 ${
-                  selectedCategory === category
+                className={
+                  'rounded-full px-5 py-2 text-sm font-medium transition-all duration-200 ' +
+                  (selectedCategory === category
                     ? 'bg-pwesh-purple text-white shadow-md shadow-pwesh-purple/20'
-                    : 'border border-pwesh-lilac/50 bg-white/80 text-pwesh-night/70 hover:bg-white hover:text-pwesh-night'
-                }`}
+                    : 'border border-pwesh-lilac/50 bg-white/80 text-pwesh-night/70 hover:bg-white hover:text-pwesh-night')
+                }
               >
                 {category}
               </button>
@@ -123,7 +139,7 @@ export default function Services() {
                 {service.image ? (
                   <img
                     src={service.image}
-                    alt={service.name}
+                    alt={service.alt}
                     className="h-full w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-105"
                     loading="lazy"
                   />
@@ -157,8 +173,8 @@ export default function Services() {
                 {/* Booking Action */}
                 <div className="mt-6 border-t border-pwesh-lilac/30 pt-4">
                   <WhatsAppButton
-                    message={`Hello PWESH BEAUTY HUB, I would like to book ${service.name}.`}
-                    label={`Book ${service.name}`}
+                    message={'Hello PWESH BEAUTY HUB, I would like to book ' + service.name + '.'}
+                    label={'Book ' + service.name}
                   />
                 </div>
               </div>

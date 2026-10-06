@@ -8,7 +8,6 @@ import SelectedWork from '../components/SelectedWork'
 import TrainingSection from '../components/TrainingSection'
 import TestimonialSection from '../components/TestimonialSection'
 import StudioSection from '../components/StudioSection'
-import heroImage from '../assets/ceo.jpeg'
 
 function Home() {
 const [isVideoOpen, setIsVideoOpen] = useState(false)
@@ -33,7 +32,7 @@ return () => {
 return (
 <>
 <section className="relative flex min-h-[40rem] items-end overflow-hidden bg-pwesh-night px-6 pb-32 pt-16 md:min-h-[38rem] md:items-center md:px-16 md:py-16">
-<img src={heroImage} alt="Adekunle Precious, CEO of PWESH BEAUTY HUB" className="absolute inset-0 h-full w-full object-cover object-[50%_15%] md:inset-auto md:right-0 md:top-0 md:w-[55%]" />
+<img src="/ceo.jpeg" fetchPriority="high" alt="Adekunle Precious, CEO of PWESH BEAUTY HUB" className="absolute inset-0 h-full w-full object-cover object-[50%_15%] md:inset-auto md:right-0 md:top-0 md:w-[55%]" />
 <div className="absolute inset-0 bg-linear-to-t from-pwesh-night/90 via-pwesh-night/55 to-transparent md:hidden"></div>
 <div className="absolute inset-0 hidden bg-linear-to-r from-pwesh-night from-40% via-pwesh-night/60 via-50% to-transparent to-68% md:block"></div>
 <div className="relative max-w-xl">

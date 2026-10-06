@@ -5,6 +5,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Training from './pages/Training'
+import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import StickyWhatsAppBar from './components/StickyWhatsAppBar'
@@ -22,6 +23,7 @@ return (
 <Route path="/contact" element={<Contact />} />
 <Route path="/gallery" element={<Gallery />} />
 <Route path="/training" element={<Training />} />
+<Route path="*" element={<NotFound />} />
 </Routes>
 <Footer />
 <StickyWhatsAppBar />

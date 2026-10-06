@@ -41,7 +41,7 @@ setPaused(false)
 if (!current) return null
 
 return (
-<section className="bg-pwesh-lilac px-6 py-12 md:px-16 md:py-20" aria-roledescription="carousel" aria-label="Client testimonials" >
+<section className="bg-pwesh-lilac px-6 py-12 md:px-16 md:py-20" aria-roledescription="carousel" aria-label="Client testimonials">
 <div className="mx-auto mb-8 max-w-6xl md:mb-12">
 <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-pwesh-purple">Client reviews</p>
 <h2 className="font-display text-4xl font-semibold leading-tight text-pwesh-night md:text-5xl">What our <em className="italic text-pwesh-purple">clients</em> say</h2>
@@ -105,7 +105,7 @@ return (
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6" /></svg>
       </button>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center">
         {testimonials.map((t, i) => (
           <button
             key={t.id}
@@ -113,8 +113,10 @@ return (
             onClick={() => goTo(i)}
             aria-label={'Show testimonial ' + (i + 1)}
             aria-current={i === index}
-            className={'h-2.5 rounded-full transition-all ' + (i === index ? 'w-6 bg-pwesh-purple' : 'w-2.5 bg-pwesh-purple/30')}
-          ></button>
+            className="flex h-8 min-w-6 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pwesh-purple"
+          >
+            <span className={'block h-2.5 rounded-full transition-all ' + (i === index ? 'w-6 bg-pwesh-purple' : 'w-2.5 bg-pwesh-purple/30')}></span>
+          </button>
         ))}
       </div>
 

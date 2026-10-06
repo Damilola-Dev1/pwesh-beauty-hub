@@ -16,6 +16,7 @@ return (
 <>
 <PageMeta />
 <Navbar />
+<main>
 <Routes>
 <Route path="/" element={<Home />} />
 <Route path="/services" element={<Services />} />
@@ -25,6 +26,7 @@ return (
 <Route path="/training" element={<Training />} />
 <Route path="*" element={<NotFound />} />
 </Routes>
+</main>
 <Footer />
 <StickyWhatsAppBar />
 </>

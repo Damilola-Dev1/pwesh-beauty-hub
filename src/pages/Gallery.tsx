@@ -4,6 +4,7 @@ import { GENERAL_MESSAGE } from '../config/messages'
 import tattooBow from '../assets/gallery-tattoo-bow.webp'
 import nailsLeopard from '../assets/gallery-nails-leopard.webp'
 import bracesMetal from '../assets/gallery-braces-metal.webp'
+import browsPhoto from '../assets/gallery-brows.webp'
 
 type GalleryStyle = {
 id: string
@@ -21,10 +22,7 @@ const galleryStyles: GalleryStyle[] = [
 { id: 'lashes-mega-volume', category: 'Lashes', name: 'Mega Volume', images: [] },
 { id: 'lashes-wet-set', category: 'Lashes', name: 'Wet Set', images: [] },
 { id: 'lashes-anime-set', category: 'Lashes', name: 'Anime Set', images: [] },
-{ id: 'brows-ombre', category: 'Brows', name: 'Ombre', images: [] },
-{ id: 'brows-microblading', category: 'Brows', name: 'Microblading', images: [] },
-{ id: 'brows-micro-shading', category: 'Brows', name: 'Micro Shading', images: [] },
-{ id: 'brows-combo', category: 'Brows', name: 'Combo Brows', images: [] },
+{ id: 'brows', category: 'Brows', name: 'Brows', images: [browsPhoto] },
 { id: 'tattoo', category: 'Tattoo', name: 'Tattoo', images: [tattooBow] },
 { id: 'piercing', category: 'Piercing', name: 'Piercing', images: [] },
 { id: 'teeth-scaling-polishing', category: 'Teeth Whitening', name: 'Scaling and Polishing', images: [] },

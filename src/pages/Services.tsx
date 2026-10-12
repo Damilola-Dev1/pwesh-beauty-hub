@@ -7,7 +7,7 @@ import bracesImage from '../assets/work-braces.webp'
 import nailsImage from '../assets/work-nails.webp'
 import browsImage from '../assets/services-brows.webp'
 import piercingImage from '../assets/services-piercing.webp'
-
+import browsLaminationImage from '../assets/services-brows-lamination.webp'
 interface Service {
 name: string
 category: string
@@ -39,8 +39,8 @@ tag: 'Precision'
 {
 name: 'Brows Lamination',
 category: 'Lashes & Brows',
-image: '',
-alt: '',
+image: browsLaminationImage,
+alt: 'Clear work of brows Lamination',
 description: 'Brow lamination that sets your brow hairs in place for a fuller, neatly groomed look.',
 tag: 'Fuller look'
 },

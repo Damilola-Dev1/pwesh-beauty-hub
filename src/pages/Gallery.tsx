@@ -5,6 +5,19 @@ import tattooBow from '../assets/gallery-tattoo-bow.webp'
 import nailsLeopard from '../assets/gallery-nails-leopard.webp'
 import bracesMetal from '../assets/gallery-braces-metal.webp'
 import browsPhoto from '../assets/gallery-brows.webp'
+import wetLashSet from '../assets/gallery-lashes-wet-set.webp'
+import wetLashSet2 from '../assets/gallery-lashes-wet-set2.webp'
+import classicLashSet from '../assets/gallery-lashes-classic-set.webp'
+import hybridLashSet from '../assets/gallery-lashes-hybrid-set.webp'
+import animeLashSet from '../assets/gallery-lashes-anime-set.webp'
+import powerChainSet from '../assets/gallery-braces-powerChain-set.webp'
+import powerChainSet2 from '../assets/gallery-braces-powerChain-set2.webp'
+import tattooOne from '../assets/gallery-tattoo1.webp'
+import tattooTwo from '../assets/gallery-tattoo2.webp'
+import tattooThree from '../assets/gallery-tattoo3.webp'
+import tattooFour from '../assets/gallery-tattoo4.webp'
+import piercing from '../assets/gallery-piercing.webp'
+import scaling from '../assets/gallery-scaling&polishing.webp'
 
 type GalleryStyle = {
 id: string
@@ -16,18 +29,16 @@ images: string[]
 const filters = ['All', 'Lashes', 'Brows', 'Tattoo', 'Piercing', 'Teeth Whitening', 'Braces', 'Nails']
 
 const galleryStyles: GalleryStyle[] = [
-{ id: 'lashes-classic', category: 'Lashes', name: 'Classic', images: [] },
-{ id: 'lashes-hybrid', category: 'Lashes', name: 'Hybrid', images: [] },
-{ id: 'lashes-volume', category: 'Lashes', name: 'Volume', images: [] },
-{ id: 'lashes-mega-volume', category: 'Lashes', name: 'Mega Volume', images: [] },
-{ id: 'lashes-wet-set', category: 'Lashes', name: 'Wet Set', images: [] },
-{ id: 'lashes-anime-set', category: 'Lashes', name: 'Anime Set', images: [] },
+{ id: 'lashes-classic', category: 'Lashes', name: 'Classic', images: [classicLashSet] },
+{ id: 'lashes-hybrid', category: 'Lashes', name: 'Hybrid', images: [hybridLashSet] },
+{ id: 'lashes-wet-set', category: 'Lashes', name: 'Wet Set', images: [wetLashSet2,wetLashSet] },
+{ id: 'lashes-anime-set', category: 'Lashes', name: 'Anime Set', images: [animeLashSet] },
 { id: 'brows', category: 'Brows', name: 'Brows', images: [browsPhoto] },
-{ id: 'tattoo', category: 'Tattoo', name: 'Tattoo', images: [tattooBow] },
-{ id: 'piercing', category: 'Piercing', name: 'Piercing', images: [] },
-{ id: 'teeth-scaling-polishing', category: 'Teeth Whitening', name: 'Scaling and Polishing', images: [] },
+{ id: 'tattoo', category: 'Tattoo', name: 'Tattoo', images: [tattooOne,tattooBow,tattooTwo, tattooThree,tattooFour] },
+{ id: 'piercing', category: 'Piercing', name: 'Piercing', images: [piercing] },
+{ id: 'teeth-scaling-polishing', category: 'Teeth Whitening', name: 'Scaling and Polishing', images: [scaling] },
 { id: 'braces-metal', category: 'Braces', name: 'Metal Braces', images: [bracesMetal] },
-{ id: 'braces-power-chain', category: 'Braces', name: 'Power Chain', images: [] },
+{ id: 'braces-power-chain', category: 'Braces', name: 'Power Chain', images: [powerChainSet,powerChainSet2] },
 { id: 'nails', category: 'Nails', name: 'Nails', images: [nailsLeopard] },
 ]
 

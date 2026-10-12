@@ -5,6 +5,7 @@ import tattooImage from '../assets/work-tattoo.webp'
 import teethImage from '../assets/work-teeth.webp'
 import bracesImage from '../assets/work-braces.webp'
 import nailsImage from '../assets/work-nails.webp'
+import browsImage from '../assets/gallery2-brow.webp'
 
 interface Work {
 label: string
@@ -14,7 +15,7 @@ alt?: string
 
 const works: Work[] = [
 { label: 'Lashes', image: lashesImage, alt: 'Lash extensions close up' },
-{ label: 'Brows' },
+{ label: 'Brows', image: browsImage, alt: 'Brow' },
 { label: 'Tattoo', image: tattooImage, alt: 'Script tattoos on a forearm and a thigh' },
 { label: 'Teeth Whitening', image: teethImage, alt: 'Teeth after whitening' },
 { label: 'Braces', image: bracesImage, alt: 'Braces on teeth' },

@@ -5,6 +5,7 @@ import tattooBow from '../assets/gallery-tattoo-bow.webp'
 import nailsLeopard from '../assets/gallery-nails-leopard.webp'
 import bracesMetal from '../assets/gallery-braces-metal.webp'
 import browsPhoto from '../assets/gallery-brows.webp'
+import browsTwo from  '../assets/gallery-brows-2.webp'
 import wetLashSet from '../assets/gallery-lashes-wet-set.webp'
 import wetLashSet2 from '../assets/gallery-lashes-wet-set2.webp'
 import classicLashSet from '../assets/gallery-lashes-classic-set.webp'
@@ -17,6 +18,7 @@ import tattooTwo from '../assets/gallery-tattoo2.webp'
 import tattooThree from '../assets/gallery-tattoo3.webp'
 import tattooFour from '../assets/gallery-tattoo4.webp'
 import piercing from '../assets/gallery-piercing.webp'
+import piercingTwo from '../assets/gallery-piercing-2.webp'
 import scaling from '../assets/gallery-scaling&polishing.webp'
 
 type GalleryStyle = {
@@ -33,9 +35,9 @@ const galleryStyles: GalleryStyle[] = [
 { id: 'lashes-hybrid', category: 'Lashes', name: 'Hybrid', images: [hybridLashSet] },
 { id: 'lashes-wet-set', category: 'Lashes', name: 'Wet Set', images: [wetLashSet2,wetLashSet] },
 { id: 'lashes-anime-set', category: 'Lashes', name: 'Anime Set', images: [animeLashSet] },
-{ id: 'brows', category: 'Brows', name: 'Brows', images: [browsPhoto] },
+{ id: 'brows', category: 'Brows', name: 'Brows', images: [browsTwo, browsPhoto] },
 { id: 'tattoo', category: 'Tattoo', name: 'Tattoo', images: [tattooOne,tattooBow,tattooTwo, tattooThree,tattooFour] },
-{ id: 'piercing', category: 'Piercing', name: 'Piercing', images: [piercing] },
+{ id: 'piercing', category: 'Piercing', name: 'Piercing', images: [piercingTwo,piercing] },
 { id: 'teeth-scaling-polishing', category: 'Teeth Whitening', name: 'Scaling and Polishing', images: [scaling] },
 { id: 'braces-metal', category: 'Braces', name: 'Metal Braces', images: [bracesMetal] },
 { id: 'braces-power-chain', category: 'Braces', name: 'Power Chain', images: [powerChainSet,powerChainSet2] },

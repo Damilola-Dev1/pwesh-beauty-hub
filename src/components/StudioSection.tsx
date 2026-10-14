@@ -1,17 +1,26 @@
 import WhatsAppButton from './WhatsAppButton'
+
 import { GENERAL_MESSAGE } from '../config/messages'
 
+import studioInterior from '../assets/studio-interior.webp'
 const location = 'Olutola Gate, opposite Miliki FM, Ojodu Berger, Lagos, Nigeria'
-const days = 'Monday - Friday'
-const hours = '9:00 AM - 7:00 PM'
-const homeService = 'Home service available. Message us on WhatsApp to schedule an appointment.'
-const directionsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(location)
 
+const days = 'Monday - Friday'
+
+const hours = '9:00 AM - 7:00 PM'
+
+const homeService = 'Home service available. Message us on WhatsApp to schedule an appointment.'
+
+const directionsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(location)
 function StudioSection() {
+
 return (
+
 <section className="bg-pwesh-paper px-6 py-16 md:px-16 md:py-20">
 <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
-<div className="aspect-[4/3] w-full rounded-2xl bg-pwesh-lilac"></div>
+<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-pwesh-lilac">
+<img src={studioInterior} alt="PWESH BEAUTYHUB name sign on the wall inside the studio" loading="lazy" className="h-full w-full object-cover" />
+</div>
 <div>
 <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-pwesh-purple">Visit the studio</p>
 <h2 className="font-display text-4xl font-semibold leading-tight text-pwesh-night md:text-5xl">Come by. <em className="italic text-pwesh-purple">We'd love to meet you.</em></h2>
@@ -41,6 +50,4 @@ Get directions
 </div>
 </section>
 )
-}
-
-export default StudioSection
+} export default StudioSection

@@ -1,75 +1,202 @@
-#PWESH BEAUTY HUB
+# Pwesh Beauty Hub
 
-A responsive website for PWESH BEAUTY HUB, a beauty studio and training centre in Ojodu Berger, Lagos, Nigeria. The site shows the studio’s services, a photo gallery of real work, in-studio training courses and contact details, and sends customer enquiries straight to WhatsApp.
+A responsive website built for **Pwesh Beauty Hub**, a beauty studio and training centre located in Ojodu Berger, Lagos, Nigeria.
 
-Live site: https://pwesh-beauty-hub.netlify.app
+The website gives prospective customers a place to explore the studio's services, view previous work, discover available training courses, and make enquiries directly through WhatsApp.
 
-##About the project
+**Live Website:** https://pwesh-beauty-hub.netlify.app/
 
-This is a real project built for a real business. The studio offers lashes, brows, tattoo, piercing, teeth whitening, braces and nails, and also runs training courses. The goal was a fast, mobile-first site where a visitor can see the work and book in one tap on WhatsApp.
+---
 
-##Pages
-=> Home: hero with studio video pop-up, services, selected work, training, testimonials and a studio block
-=> Services: all services with filter tabs and a Book button for each
-=> Gallery: filter tabs and one tile per style, each opening a photo slider pop-up
-=> Training: the five courses offered, with practicals and certificates
-=> About: meet the owner, what the studio does and how it works
-=> Contact: Google map, directions link, opening hours and social links
-=> 404: a friendly page for unknown addresses
+## About the Project
 
-##Features
-=> WhatsApp enquiry buttons with a ready-written message for each service, plus a sticky WhatsApp bar on mobile
-=> Gallery photo slider with next and previous arrows, keyboard arrows, Escape to close and click outside to close
-=> Testimonial slider that changes automatically, can be swiped, pauses on hover and touch, and stays still for visitors who prefer reduced motion
-=> Studio video pop-up that plays a YouTube Short
-=> Mobile hamburger menu and a layout that works from phone to laptop
-=> Settings kept in simple config files (WhatsApp number, messages, social links, video, testimonials) so content can change without touching the page code
-=> Per-page titles and descriptions for search engines and link sharing, a favicon and a robots.txt file
+Pwesh Beauty Hub is a client website designed to establish the studio's online presence and make it easier for potential customers to discover its services and training programmes.
 
-##Built with
-=> React
-=> TypeScript
-=> Tailwind CSS
-=> Vite
-=> React Router
+The website focuses on presenting the studio's work visually, providing useful business information, and creating straightforward enquiry paths for visitors interested in booking a service or learning more about a course.
 
-Hosted on Netlify, with the code on GitHub
+## Technologies Used
 
-##Performance and quality
-=> Lighthouse results on mobile for the live site:
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- React Router
 
-=> Performance: 91
-=> Accessibility: 100
-=> Best Practices: 100
-=> SEO: 100
+## Pages and Sections
 
-##Steps taken to get there:
+- **Home:** Introduces the studio through a hero section with a video pop-up, featured services, selected work, training information, testimonials, and a studio introduction.
+- **Services:** Displays available beauty services with category filters and individual booking enquiry buttons.
+- **Gallery:** Showcases the studio's work with category filters and an interactive image viewer.
+- **Training:** Presents the available training courses, practical learning information, and certificates.
+- **About:** Introduces the studio and its owner.
+- **Contact:** Provides the studio's location, Google Maps directions, opening hours, and social media links.
+- **404 Page:** Provides a dedicated page for routes that do not exist.
 
-=> Photos converted to WebP and compressed
-=> The hero photo is preloaded with high priority, which raised Performance from 52 to 79 on its own
-=> A main landmark and larger tap areas on the slider controls for accessibility
-=> A valid robots.txt for SEO
+## Key Features
 
-##Project structure
-=> src/pages: one file for each page
-=> src/components: Navbar, Footer, WhatsApp buttons and the page sections
-=> src/config: WhatsApp number, messages, social links, video and testimonials
-=> src/assets: photos and logos
-=> public: favicon, robots.txt and the redirects file that makes page refreshes work on Netlify
+### WhatsApp Enquiries
+- Service-specific WhatsApp enquiry buttons with pre-filled messages.
+- Sticky WhatsApp contact bar on mobile devices.
+- Centralised configuration for the WhatsApp number and message templates.
 
-##Run it on your computer
+### Interactive Gallery
+- Category-based gallery filtering.
+- Image viewer with next and previous navigation.
+- Keyboard navigation using the arrow keys.
+- Escape key and outside-click support for closing the viewer.
+
+### Video and Testimonials
+- YouTube Shorts video pop-up.
+- Testimonial slider with automatic transitions.
+- Swipe support for touch devices.
+- Pauses on hover and touch interaction.
+- Respects reduced-motion preferences.
+
+### Responsive Navigation
+- Mobile-friendly hamburger navigation.
+- Responsive layouts across mobile phones, tablets, and desktop screens.
+
+### Centralised Configuration
+Important content and contact details can be managed through configuration files, including:
+- WhatsApp number and enquiry messages.
+- Social media links.
+- Testimonials.
+- Video information.
+
+### SEO and Accessibility
+- Page-specific titles and meta descriptions.
+- Favicon configuration.
+- `robots.txt` file.
+- Main landmark structure.
+- Improved slider tap-target sizes.
+- Reduced-motion support.
+
+## Performance Optimisation
+
+The website was tested using Google Lighthouse on mobile.
+
+| Category | Score |
+|---|---:|
+| Performance | 91 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+Some optimisation work included:
+
+- Compressing and converting images to WebP where appropriate.
+- Preloading the hero image with high priority.
+- Improving the main landmark structure.
+- Increasing slider interaction target sizes.
+- Providing a valid `robots.txt` file.
+
+The hero image preload improvement helped increase the Performance score from 52 to 79 during optimisation.
+
+*Lighthouse scores represent the test results recorded during development and may vary depending on testing conditions.*
+
+## Project Structure
+
+```text
+pwesh-beauty-hub/
+├── public/
+│   ├── ceo.jpeg
+│   ├── favicon.png
+│   ├── favicon.svg
+│   ├── icons.svg
+│   ├── robots.txt
+│   └── _redirects
+│
+├── src/
+│   ├── assets/
+│   │   ├── Images and graphics
+│   │   └── Logo and other visual assets
+│   │
+│   ├── components/
+│   │   ├── Footer.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── PageMeta.tsx
+│   │   ├── SelectedWork.tsx
+│   │   ├── ServicesSection.tsx
+│   │   ├── StickyWhatsAppBar.tsx
+│   │   ├── StudioSection.tsx
+│   │   ├── TestimonialSection.tsx
+│   │   ├── TrainingSection.tsx
+│   │   └── WhatsAppButton.tsx
+│   │
+│   ├── config/
+│   │   ├── messages.ts
+│   │   ├── social.ts
+│   │   ├── testimonials.ts
+│   │   ├── video.ts
+│   │   └── whatsapp.ts
+│   │
+│   ├── pages/
+│   │   ├── About.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Gallery.tsx
+│   │   ├── Home.tsx
+│   │   ├── NotFound.tsx
+│   │   ├── Services.tsx
+│   │   └── Training.tsx
+│   │
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+│
+├── .gitignore
+├── .oxlintrc.json
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── README.md
+```
+
+## Installation and Setup
+
+To run the project locally:
+
+1. Clone the repository:
+
+```bash
 git clone https://github.com/Damilola-Dev1/pwesh-beauty-hub.git
+```
+
+2. Navigate into the project directory:
+
+```bash
 cd pwesh-beauty-hub
+```
+
+3. Install dependencies:
+
+```bash
 npm install
+```
+
+4. Start the development server:
+
+```bash
 npm run dev
+```
 
-##To make a production build:
-npm run build
-Notes
+## Deployment
 
-##Photos are used with the studio’s permission
-Author
+The website is deployed on Netlify.
 
-Damilola, a frontend developer based in Lagos, Nigeria.
+**Live Website:** https://pwesh-beauty-hub.netlify.app/
 
-GitHub: https://github.com/Damilola-Dev1
+## Author
+
+**Damilola Samuel A.**  
+Frontend Developer based in Lagos, Nigeria.
+
+- GitHub: https://github.com/Damilola-Dev1
+
+---
+
+*This project was developed for Pwesh Beauty Hub. Studio photographs were used with permission.*

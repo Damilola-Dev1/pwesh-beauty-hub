@@ -1,202 +1,141 @@
-# Pwesh Beauty Hub
+# PWESH BEAUTY HUB
 
-A responsive website built for **Pwesh Beauty Hub**, a beauty studio and training centre located in Ojodu Berger, Lagos, Nigeria.
+A responsive, multi-page website built for **PWESH BEAUTY HUB**, a beauty studio and training centre in Ojodu Berger, Lagos, Nigeria.
 
-The website gives prospective customers a place to explore the studio's services, view previous work, discover available training courses, and make enquiries directly through WhatsApp.
+The website showcases the studio's services, portfolio, training programmes, and business information. It also makes it easy for potential customers to enquire about services and bookings directly through WhatsApp.
 
-**Live Website:** https://pwesh-beauty-hub.netlify.app/
+**Live Website:** https://pwesh-beauty-hub.netlify.app
 
----
+## Application Preview
+
+![PWESH BEAUTY HUB Homepage](./screenshots/homepage.png)
 
 ## About the Project
 
-Pwesh Beauty Hub is a client website designed to establish the studio's online presence and make it easier for potential customers to discover its services and training programmes.
+This is a real-world website developed for an operating beauty business.
 
-The website focuses on presenting the studio's work visually, providing useful business information, and creating straightforward enquiry paths for visitors interested in booking a service or learning more about a course.
+The goal was to create a professional, mobile-friendly online presence where visitors can explore the studio's services, view examples of its work, learn about available training programmes, and make enquiries without unnecessary steps.
 
 ## Technologies Used
 
-- React
+- React 19
 - TypeScript
-- Tailwind CSS
-- Vite
-- React Router
+- Tailwind CSS 4
+- React Router 7
+- Vite 8
 
-## Pages and Sections
+## Pages
 
-- **Home:** Introduces the studio through a hero section with a video pop-up, featured services, selected work, training information, testimonials, and a studio introduction.
-- **Services:** Displays available beauty services with category filters and individual booking enquiry buttons.
-- **Gallery:** Showcases the studio's work with category filters and an interactive image viewer.
-- **Training:** Presents the available training courses, practical learning information, and certificates.
-- **About:** Introduces the studio and its owner.
-- **Contact:** Provides the studio's location, Google Maps directions, opening hours, and social media links.
-- **404 Page:** Provides a dedicated page for routes that do not exist.
+- **Home:** Introduces the studio, highlights services and selected work, and features training programmes and testimonials.
+- **Services:** Displays available beauty services with category filters and direct booking enquiry options.
+- **Gallery:** Showcases completed work with category filters and an interactive photo slider.
+- **Training:** Presents the studio's training courses, practical sessions, and certificates.
+- **About:** Introduces the business and its owner.
+- **Contact:** Provides location details, directions, opening hours, and social media links.
+- **404:** Provides a custom page for unavailable routes.
 
 ## Key Features
 
-### WhatsApp Enquiries
-- Service-specific WhatsApp enquiry buttons with pre-filled messages.
+- WhatsApp enquiry links with pre-filled messages for individual services.
 - Sticky WhatsApp contact bar on mobile devices.
-- Centralised configuration for the WhatsApp number and message templates.
+- Interactive gallery with next/previous navigation and keyboard controls.
+- Gallery modal with Escape-key and outside-click dismissal.
+- Auto-playing testimonial slider with touch support and reduced-motion consideration.
+- Video popup featuring a YouTube Short.
+- Responsive navigation with a mobile hamburger menu.
+- Centralised configuration for WhatsApp details, social links, video, and testimonials.
+- Page-specific titles and meta descriptions for search engines and link sharing.
+- Custom favicon and robots.txt.
 
-### Interactive Gallery
-- Category-based gallery filtering.
-- Image viewer with next and previous navigation.
-- Keyboard navigation using the arrow keys.
-- Escape key and outside-click support for closing the viewer.
+## Performance and Accessibility
 
-### Video and Testimonials
-- YouTube Shorts video pop-up.
-- Testimonial slider with automatic transitions.
-- Swipe support for touch devices.
-- Pauses on hover and touch interaction.
-- Respects reduced-motion preferences.
+Mobile Lighthouse results recorded during development:
 
-### Responsive Navigation
-- Mobile-friendly hamburger navigation.
-- Responsive layouts across mobile phones, tablets, and desktop screens.
+| Category       | Score |
+| -------------- | ----: |
+| Performance    |    91 |
+| Accessibility  |   100 |
+| Best Practices |   100 |
+| SEO            |   100 |
 
-### Centralised Configuration
-Important content and contact details can be managed through configuration files, including:
-- WhatsApp number and enquiry messages.
-- Social media links.
-- Testimonials.
-- Video information.
+### Optimisation and Quality Improvements
 
-### SEO and Accessibility
-- Page-specific titles and meta descriptions.
-- Favicon configuration.
-- `robots.txt` file.
-- Main landmark structure.
-- Improved slider tap-target sizes.
-- Reduced-motion support.
+- Converted and compressed images to WebP to reduce image file sizes.
+- Preloaded the hero image with high priority to improve loading performance.
+- Improved accessibility with a main landmark and larger slider control touch targets.
+- Added a valid robots.txt file for search engine crawling.
+- Implemented reduced-motion support.
 
-## Performance Optimisation
-
-The website was tested using Google Lighthouse on mobile.
-
-| Category | Score |
-|---|---:|
-| Performance | 91 |
-| Accessibility | 100 |
-| Best Practices | 100 |
-| SEO | 100 |
-
-Some optimisation work included:
-
-- Compressing and converting images to WebP where appropriate.
-- Preloading the hero image with high priority.
-- Improving the main landmark structure.
-- Increasing slider interaction target sizes.
-- Providing a valid `robots.txt` file.
-
-The hero image preload improvement helped increase the Performance score from 52 to 79 during optimisation.
-
-*Lighthouse scores represent the test results recorded during development and may vary depending on testing conditions.*
+_Lighthouse scores are recorded test results and may vary depending on testing conditions._
 
 ## Project Structure
 
 ```text
-pwesh-beauty-hub/
-├── public/
-│   ├── ceo.jpeg
-│   ├── favicon.png
-│   ├── favicon.svg
-│   ├── icons.svg
-│   ├── robots.txt
-│   └── _redirects
-│
-├── src/
-│   ├── assets/
-│   │   ├── Images and graphics
-│   │   └── Logo and other visual assets
-│   │
-│   ├── components/
-│   │   ├── Footer.tsx
-│   │   ├── Navbar.tsx
-│   │   ├── PageMeta.tsx
-│   │   ├── SelectedWork.tsx
-│   │   ├── ServicesSection.tsx
-│   │   ├── StickyWhatsAppBar.tsx
-│   │   ├── StudioSection.tsx
-│   │   ├── TestimonialSection.tsx
-│   │   ├── TrainingSection.tsx
-│   │   └── WhatsAppButton.tsx
-│   │
-│   ├── config/
-│   │   ├── messages.ts
-│   │   ├── social.ts
-│   │   ├── testimonials.ts
-│   │   ├── video.ts
-│   │   └── whatsapp.ts
-│   │
-│   ├── pages/
-│   │   ├── About.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Gallery.tsx
-│   │   ├── Home.tsx
-│   │   ├── NotFound.tsx
-│   │   ├── Services.tsx
-│   │   └── Training.tsx
-│   │
-│   ├── App.css
-│   ├── App.tsx
-│   ├── index.css
-│   └── main.tsx
-│
-├── .gitignore
-├── .oxlintrc.json
-├── index.html
-├── package.json
-├── package-lock.json
-├── tsconfig.app.json
-├── tsconfig.json
-├── tsconfig.node.json
-├── vite.config.ts
-└── README.md
+src/
+├── assets/       # Images, logos, and visual assets
+├── components/   # Reusable UI components
+├── config/       # Business details and content configuration
+└── pages/        # Application pages
+
+public/           # Public assets, favicon, and robots.txt
+screenshots/      # README application screenshots
 ```
 
-## Installation and Setup
+## Getting Started
 
 To run the project locally:
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/Damilola-Dev1/pwesh-beauty-hub.git
-```
+   ```bash
+   git clone https://github.com/Damilola-Dev1/pwesh-beauty-hub.git
+   ```
 
 2. Navigate into the project directory:
 
-```bash
-cd pwesh-beauty-hub
-```
+   ```bash
+   cd pwesh-beauty-hub
+   ```
 
 3. Install dependencies:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 4. Start the development server:
 
+   ```bash
+   npm run dev
+   ```
+
+### Production Build
+
+To create an optimised production build:
+
 ```bash
-npm run dev
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
 ```
 
 ## Deployment
 
 The website is deployed on Netlify.
 
-**Live Website:** https://pwesh-beauty-hub.netlify.app/
+**Live Website:** https://pwesh-beauty-hub.netlify.app
 
-## Author
+## Developer
 
-**Damilola Samuel A.**  
-Frontend Developer based in Lagos, Nigeria.
+**Damilola Samuel A.**
 
-- GitHub: https://github.com/Damilola-Dev1
+Frontend Developer | Lagos, Nigeria
 
----
+- [GitHub](https://github.com/Damilola-Dev1)
+- [LinkedIn](https://www.linkedin.com/in/damilola-samuel-a-a3bb6b360/)
 
-*This project was developed for Pwesh Beauty Hub. Studio photographs were used with permission.*
+_This project was developed for Pwesh Beauty Hub. Studio photographs were used with permission._
